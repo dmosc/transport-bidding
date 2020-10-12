@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import {BrowserRouter as Router} from 'react-router-dom';
+
 import App from './App';
+import ReduxWrapper from './redux';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ReduxWrapper>
+    <Router basename="/">
+      <App />
+    </Router>
+  </ReduxWrapper>,
   document.getElementById('root'),
 );
